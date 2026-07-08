@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BuyWise – Smart Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <div class="logo-mark">
+          <span class="logo-dot"></span>
+          <span class="logo-dot"></span>
+          <span class="logo-dot"></span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">BuyWise</span>
+          <span class="logo-sub">Smart Shopping</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Deals</a>
+        <a href="#">Categories</a>
+        <a href="#">Trending</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-outline">Sign In</button>
+        <button class="btn-solid">Get Started</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="hero-glow g3"></div>
+
+    <div class="hero-body">
+      <div class="hero-tag">AI-Powered Recommendations</div>
+      <h1 class="hero-title">
+        Experience the Future of<br>
+        <em class="hero-accent">Smart Shopping</em>
+      </h1>
+      <p class="hero-desc">
+        Describe what you're looking for and our AI engine instantly surfaces
+        the best-rated products matched perfectly to your needs.
+      </p>
+
+      <div class="search-wrap">
+        <div class="search-bar" id="searchBarEl">
+          <svg class="search-ico" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input type="text" id="searchInput"
+                 placeholder="Search laptops, phones, cameras…"
+                 autocomplete="off"/>
+          <button onclick="searchProducts()" id="searchBtn">
+            Search
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" width="16" height="16">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="quick-pills">
+          <span onclick="fillSearch('phone')">Phones</span>
+          <span onclick="fillSearch('laptop')">Laptops</span>
+          <span onclick="fillSearch('headphones')">Headphones</span>
+          <span onclick="fillSearch('watch')">Watches</span>
+          <span onclick="fillSearch('camera')">Cameras</span>
+          <span onclick="fillSearch('shoes')">Shoes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-strip">
+      <div class="stat-item">
+        <strong>10,000+</strong>
+        <span>Products Indexed</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-item">
+        <strong>99%</strong>
+        <span>Match Accuracy</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-item">
+        <strong>4.9 / 5</strong>
+        <span>User Rating</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-item">
+        <strong>&lt; 50ms</strong>
+        <span>Avg Response</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results-section">
+    <div id="resultsHeader" class="res-header" style="display:none;">
+      <div class="res-title-row">
+        <h2 id="resultsTitle">Results</h2>
+        <span id="resultsCount" class="res-count"></span>
+      </div>
+      <div class="res-divider"></div>
+    </div>
+
+    <div id="loading" class="loading-box" style="display:none;">
+      <div class="loader-track">
+        <div class="loader-bar"></div>
+      </div>
+      <p>Finding the best matches for you…</p>
+    </div>
+
+    <div id="results" class="products-grid"></div>
+
+    <div id="emptyState" class="empty-state" style="display:none;">
+      <div class="empty-icon">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="28" cy="28" r="18"/>
+          <path d="m42 42 12 12"/>
+          <path d="M22 28h12M28 22v12" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3>No products found</h3>
+      <p>Try a different keyword or browse a category above</p>
+      <button onclick="document.getElementById('searchInput').focus()">Search Again</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-mark sm">
+          <span class="logo-dot"></span>
+          <span class="logo-dot"></span>
+          <span class="logo-dot"></span>
+        </div>
+        <span class="logo-name">BuyWise</span>
+      </div>
+      <p class="footer-tag">Experience the Future of Smart Shopping</p>
+      <p class="footer-copy">© 2025 BuyWise. Powered by AI.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
