@@ -8,15 +8,7 @@ Features
 5. Real-time recommendation delivery through Flask API
 6. Responsive web interface using HTML, CSS, and JavaScript
 
-Technologies Used
-1. Python 
-2. PySpark
-3. TensorFlow 
-4. Flask 
-5. Pandas 
-6. HTML
-7. CSS
-8. JavaScript
+Technologies Used : Python, PySpark, TensorFlow, Flask, Pandas, HTML, CSS, JavaScript
 
 Project Structure Ecommerce-recommender
 1.Backend app.py 
